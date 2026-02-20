@@ -5,39 +5,49 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "processed_data",
-  "employee_mobile",
-  "customer_mobile",
-  "column_break_9",
-  "raw_date",
-  "employee",
+  "client_details_section",
   "client",
+  "column_break_ftxo",
+  "client_country_code",
+  "customer_mobile",
+  "section_break_hqxz",
+  "employee",
+  "employee_tags",
+  "column_break_9",
+  "employee_country_code",
+  "employee_mobile",
+  "call_details_section",
+  "unique_call_id",
   "date",
-  "time",
   "duration",
+  "call_recording_url",
+  "crm_status",
+  "lead_id",
+  "column_break_ukjf",
   "calltype",
+  "time",
   "note",
+  "synced_at",
+  "reminder_date",
+  "reminder_time",
+  "section_break_uqls",
   "raw_log",
   "integration_request"
  ],
  "fields": [
   {
-   "fieldname": "raw_date",
-   "fieldtype": "Heading",
-   "label": "Raw Data"
-  },
-  {
    "fieldname": "employee",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Employee",
+   "label": "Employee Name",
    "read_only": 1
   },
   {
    "fieldname": "client",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "Client",
+   "label": "Client Name",
+   "length": 200,
    "read_only": 1
   },
   {
@@ -79,15 +89,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "processed_data",
-   "fieldtype": "Heading",
-   "label": "Processed Data"
-  },
-  {
    "fieldname": "employee_mobile",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "Sales Person Mobile",
+   "label": "Employee Number",
    "options": "Phone",
    "read_only": 1
   },
@@ -95,8 +100,9 @@
    "fieldname": "customer_mobile",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "Customer Mobile",
-   "options": "Phone"
+   "label": "Client Number",
+   "options": "Phone",
+   "read_only": 1
   },
   {
    "fieldname": "raw_log",
@@ -111,11 +117,100 @@
    "label": "Integration Request",
    "options": "Integration Request",
    "read_only": 1
+  },
+  {
+   "fieldname": "unique_call_id",
+   "fieldtype": "Data",
+   "label": "Unique Call ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_hqxz",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details"
+  },
+  {
+   "fieldname": "client_details_section",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "column_break_ftxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_country_code",
+   "fieldtype": "Int",
+   "label": "Client Country Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_tags",
+   "fieldtype": "Data",
+   "label": "Employee Tags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_country_code",
+   "fieldtype": "Int",
+   "label": "Employee Country Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call_recording_url",
+   "fieldtype": "Data",
+   "label": "Call Recording URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "crm_status",
+   "fieldtype": "Data",
+   "label": "CRM Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_id",
+   "fieldtype": "Data",
+   "label": "Lead ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ukjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "synced_at",
+   "fieldtype": "Data",
+   "label": "Synced At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reminder_date",
+   "fieldtype": "Date",
+   "label": "Reminder Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reminder_time",
+   "fieldtype": "Time",
+   "label": "Reminder Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_uqls",
+   "fieldtype": "Section Break"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-21 18:26:34.231764",
+ "modified": "2026-02-20 10:08:54.579441",
  "modified_by": "Administrator",
  "module": "Callyzer ERPNext Integration",
  "name": "Callyzer Call Log",
@@ -161,7 +256,9 @@
    "share": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

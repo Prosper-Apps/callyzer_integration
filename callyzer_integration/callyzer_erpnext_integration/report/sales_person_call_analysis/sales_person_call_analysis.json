@@ -1,16 +1,16 @@
 {
  "add_total_row": 0,
+ "add_translate_data": 0,
  "columns": [],
  "creation": "2021-09-15 10:52:32.815712",
- "disable_prepared_report": 0,
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 2,
  "is_standard": "Yes",
- "letter_head": "Standard",
- "modified": "2021-09-17 11:39:24.263805",
+ "letter_head": null,
+ "modified": "2026-02-19 08:58:38.577883",
  "modified_by": "Administrator",
  "module": "Callyzer ERPNext Integration",
  "name": "Sales Person Call Analysis",
@@ -35,5 +35,6 @@
   {
    "role": "HR Manager"
   }
- ]
+ ],
+ "timeout": 0
 }

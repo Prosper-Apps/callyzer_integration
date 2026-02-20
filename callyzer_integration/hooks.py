@@ -100,11 +100,22 @@ doc_events = {
 # ---------------
 scheduler_events = {
 	"cron": {
-		"0/5 * * * *": [
+        # Runs Every Hour
+		"0 * * * *": [
 			"callyzer_integration.callyzer_integration_hook.auto_pull_callyzer_logs"
+		],
+		# Runs At 1:00 AM Every Night
+        "0 1 * * *": [
+            "callyzer_integration.callyzer_erpnext_integration.doctype.callyzer_call_summary_log.callyzer_call_summary_log.fetch_per_day_call_summary",
+            "callyzer_integration.callyzer_integration_hook.fetch_last_thirty_days_connected_calls_in_lead"
 		]
 	}
 }
+
+default_log_clearing_doctypes = {
+    "Callyzer Call Log": 60
+}
+
 # scheduler_events = {
 # 	"all": [
 # 		"callyzer_integration.tasks.all"

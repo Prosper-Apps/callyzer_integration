@@ -8,8 +8,13 @@
   "enabled",
   "section_break_2",
   "bearer_token",
+  "last_api_call_time",
+  "manual_call_history",
+  "column_break_abot",
   "call_history_url",
-  "last_api_call_time"
+  "callyzer_summary_log_url",
+  "last_summary_api_call_date",
+  "manual_summary_call"
  ],
  "fields": [
   {
@@ -40,12 +45,40 @@
    "fieldname": "last_api_call_time",
    "fieldtype": "Datetime",
    "label": "Last Api Call Time"
+  },
+  {
+   "fieldname": "callyzer_summary_log_url",
+   "fieldtype": "Data",
+   "label": "Callyzer Summary Log URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "column_break_abot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "<p>\n  To manually call the History API, set the date and time in the <b>Last API Call Time</b> field from which you want to fetch the data.\n</p>\n",
+   "fieldname": "manual_call_history",
+   "fieldtype": "Button",
+   "label": "Manual Call History"
+  },
+  {
+   "fieldname": "last_summary_api_call_date",
+   "fieldtype": "Date",
+   "label": "Last Summary API Call Date"
+  },
+  {
+   "description": "<p>\n  To manually call the Summary API, set a date in the <b>Last Summary API Call Date</b> field.\n</p>\n\n<p>\n  <b>Note:</b> The above date represents the last API call date. For a manual call, enter a date one day earlier than the desired data date.\n</p>\n\n<p>\n  <b>Example:</b> To manually fetch data for 19-02-2025, enter 18-02-2025.\n</p>\n",
+   "fieldname": "manual_summary_call",
+   "fieldtype": "Button",
+   "label": "Manual Summary Call"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-09-15 17:39:28.482783",
+ "modified": "2026-02-19 18:12:26.404845",
  "modified_by": "Administrator",
  "module": "Callyzer ERPNext Integration",
  "name": "Callyzer Settings",
@@ -62,7 +95,9 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

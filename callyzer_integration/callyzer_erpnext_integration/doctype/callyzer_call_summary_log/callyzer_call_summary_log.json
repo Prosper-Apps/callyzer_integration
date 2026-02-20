@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CSL-.####",
+ "creation": "2026-02-06 16:18:49.537789",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_person_details_section",
+  "sales_person",
+  "call_summary_date",
+  "column_break_zcku",
+  "sales_person_mobile_no",
+  "call_summary_section",
+  "total_incoming_calls",
+  "total_outgoing_calls",
+  "total_missed_calls",
+  "total_calls",
+  "total_never_attended_calls",
+  "total_unique_clients",
+  "total_connected_calls",
+  "column_break_pvgz",
+  "total_incoming_duration",
+  "total_outgoing_duration",
+  "total_rejected_calls",
+  "total_duration",
+  "total_not_pickup_by_client_calls",
+  "total_working_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_person_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Person Details"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "call_summary_date",
+   "fieldtype": "Date",
+   "label": "Call Summary Date"
+  },
+  {
+   "fieldname": "column_break_zcku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sales_person.mobile_no_cf",
+   "fieldname": "sales_person_mobile_no",
+   "fieldtype": "Data",
+   "label": "Sales Person Mobile No"
+  },
+  {
+   "fieldname": "call_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Call Summary"
+  },
+  {
+   "fieldname": "total_incoming_calls",
+   "fieldtype": "Data",
+   "label": "Total Incoming Calls"
+  },
+  {
+   "fieldname": "total_outgoing_calls",
+   "fieldtype": "Data",
+   "label": "Total Outgoing Calls"
+  },
+  {
+   "fieldname": "total_missed_calls",
+   "fieldtype": "Data",
+   "label": "Total Missed Calls"
+  },
+  {
+   "fieldname": "total_calls",
+   "fieldtype": "Data",
+   "label": "Total Calls"
+  },
+  {
+   "fieldname": "total_never_attended_calls",
+   "fieldtype": "Data",
+   "label": "Total Never Attended Calls"
+  },
+  {
+   "fieldname": "total_unique_clients",
+   "fieldtype": "Data",
+   "label": "Total Unique Clients"
+  },
+  {
+   "fieldname": "total_connected_calls",
+   "fieldtype": "Data",
+   "label": "Total Connected Calls"
+  },
+  {
+   "fieldname": "column_break_pvgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "This Duration Will Be In Seconds",
+   "fieldname": "total_incoming_duration",
+   "fieldtype": "Data",
+   "label": "Total Incoming Duration"
+  },
+  {
+   "description": "This Duration Will Be In Seconds",
+   "fieldname": "total_outgoing_duration",
+   "fieldtype": "Data",
+   "label": "Total Outgoing Duration"
+  },
+  {
+   "fieldname": "total_rejected_calls",
+   "fieldtype": "Data",
+   "label": "Total Rejected Calls"
+  },
+  {
+   "description": "This Duration Will Be In Seconds",
+   "fieldname": "total_duration",
+   "fieldtype": "Data",
+   "label": "Total Duration"
+  },
+  {
+   "fieldname": "total_not_pickup_by_client_calls",
+   "fieldtype": "Data",
+   "label": "Total Not Pickup By Client Calls"
+  },
+  {
+   "fieldname": "total_working_hours",
+   "fieldtype": "Data",
+   "label": "Total Working Hours"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-09 15:59:47.966958",
+ "modified_by": "Administrator",
+ "module": "Callyzer ERPNext Integration",
+ "name": "Callyzer Call Summary Log",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
