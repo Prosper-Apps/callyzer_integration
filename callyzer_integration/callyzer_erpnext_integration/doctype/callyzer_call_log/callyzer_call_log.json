@@ -210,7 +210,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-20 10:08:54.579441",
+ "modified": "2026-02-20 12:30:23.221534",
  "modified_by": "Administrator",
  "module": "Callyzer ERPNext Integration",
  "name": "Callyzer Call Log",
@@ -234,15 +234,6 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Sales User",
-   "share": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
    "role": "Sales Manager",
    "share": 1
   },
@@ -254,6 +245,28 @@
    "report": 1,
    "role": "Sales Master Manager",
    "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Master Manager",
+   "share": 1,
+   "write": 1
   }
  ],
  "row_format": "Dynamic",

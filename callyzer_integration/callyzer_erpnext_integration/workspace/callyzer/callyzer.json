@@ -22,7 +22,7 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Lead Wise Call Analysis",
    "link_count": 0,
    "link_to": "Lead Wise Call Analysis",
@@ -33,7 +33,7 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Sales Person Call Analysis",
    "link_count": 0,
    "link_to": "Sales Person Call Analysis",
@@ -102,7 +102,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-02-20 11:57:56.814344",
+ "modified": "2026-02-20 14:30:36.747845",
  "modified_by": "Administrator",
  "module": "Callyzer ERPNext Integration",
  "name": "Callyzer",

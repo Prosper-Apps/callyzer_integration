@@ -113,7 +113,7 @@ scheduler_events = {
 }
 
 default_log_clearing_doctypes = {
-    "Callyzer Call Log": 60
+    "Callyzer Call Log": 180
 }
 
 # scheduler_events = {

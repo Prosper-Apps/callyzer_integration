@@ -230,11 +230,40 @@ def fetch_last_thirty_days_connected_calls_in_lead():
 			'''.format(lead.mobile_no, start_date, end_date)
 			, as_dict = 1)
 
-			if count and len(count) > 0:
+			last_call_detail = frappe.db.sql('''
+				SELECT 
+					call_log.`date` as last_date, 
+					call_log.calltype as type, 
+					call_log.time,
+					call_log.duration 
+				FROM  
+					`tabCallyzer Call Log` call_log
+				WHERE
+					call_log.customer_mobile = "{0}"
+				ORDER BY call_log.`date` DESC, call_log.time  DESC
+				LIMIT 1
+			'''.format(lead.mobile_no)
+			, as_dict = 1)
+
+			if len(count) > 0 and len(last_call_detail) > 0:
 				print(lead, count)
 				# doc = frappe.get_doc("Lead", lead['name'])
 				# doc.custom_last_thirty_days_call_count = count[0].total_connected
 				# doc.save(ignore_permissions=True)
-				frappe.db.set_value("Lead", lead.get("name"), "custom_last_thirty_days_call_count", count[0].total_connected)
+				frappe.db.set_value("Lead", lead.get("name"), "custom_last_30_days_call_count", count[0].total_connected)
+				frappe.db.set_value("Lead", lead.get("name"), "custom_last_call_date", last_call_detail[0].last_date)
+				outcome = ""
+				if last_call_detail[0].type == "Outgoing" and last_call_detail[0].duration > 2:
+					outcome = "Connected"
+				if last_call_detail[0].type == "Outgoing" and last_call_detail[0].duration < 2:
+					outcome = "Not Connected"
+				elif last_call_detail[0].type == "Rejected":
+					outcome = "Not Connected"
+				elif last_call_detail[0].type == "Incoming":
+					outcome = "Incoming"
+				elif last_call_detail[0].type == "Missed":
+					outcome = "Missed"
+
+				frappe.db.set_value("Lead", lead.get("name"), "custom_call_outcome", outcome)
 				frappe.db.commit()
 				print('Updated')
